@@ -1,9 +1,15 @@
 # CheckValidator
 
-This lib will check and validate some argument.
+This lib will check and validate some int, string, array, boolean, DateTime.
 
+## Documentation
 
-## Integer Validator
+Firstly, you'll need to put these lines :
+```php
+require __DIR__.'/vendor/autoload.php';
+```
+
+### Integer Validator
 
 With Integer Validator, it's checking and return true if your number is :
 
@@ -60,7 +66,7 @@ echo \CHECK\CheckValidator\IntegerValidator::negative($int);
 $int - Number you want to check if it's negative.
 
 
-## String Validator
+### String Validator
 
 With String Validator, it's checking and return true if your string is :
 
@@ -117,7 +123,7 @@ echo \CHECK\CheckValidator\StringValidator::noWhiteSpace($string);
 $string - Your string which you want to remove white space.
 
 
-## Boolean Validator
+### Boolean Validator
 
 With Boolean Validator, it's checking and return true if your boolean is :
 
@@ -135,7 +141,7 @@ echo \CHECK\CheckValidator\BooleanValidator::isFalse(false);
 ```
 $false - Your boolean which must be false.
 
-## Array Validator
+### Array Validator
 
 With Array Validator, it's checking and return true if :
 
@@ -186,7 +192,7 @@ $array - Your array which you want to check.
 $value - Value which you want to check if it's exist.
 
 
-## DateTime Validator
+### DateTime Validator
 
 With DateTime Validator, it's checking and return true if :
 

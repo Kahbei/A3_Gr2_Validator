@@ -75,19 +75,19 @@ class ArrayValidator
                 break;
 
             case self::OPERATOR_SUPERIOR_EQUAL:
-                $arrayOperator = count($array) <= $int;
+                $arrayOperator = count($array) >= $int;
                 break;
 
             case self::OPERATOR_SUPERIOR:
-                $arrayOperator = count($array) < $int;
-                break;
-
-            case self::OPERATOR_INFERIOR:
                 $arrayOperator = count($array) > $int;
                 break;
 
+            case self::OPERATOR_INFERIOR:
+                $arrayOperator = count($array) < $int;
+                break;
+
             case self::OPERATOR_INFERIOR_EQUAL:
-                $arrayOperator = count($array) >= $int;
+                $arrayOperator = count($array) <= $int;
                 break;
         }
         return $arrayOperator;

@@ -114,8 +114,7 @@ class StringValidator
         if(!is_string($string)){
             throw new \Exception('Parameter must be in correct format');
         }
-        $noWhiteSpace = trim($string);
-        if(preg_match("/^\s/",$noWhiteSpace) == 0 && preg_match("/\s$/",$noWhiteSpace) == 0){
+        if(preg_match("/^\s/",$string) == 0 && preg_match("/\s$/",$string) == 0){
             return true;
         }
         else{
@@ -134,8 +133,7 @@ class StringValidator
         if(!is_string($string)){
             throw new \Exception('Parameter must be in correct format');
         }
-        $noWhiteSpace = explode(" ",$string);
-        if(preg_match("/\s/",implode($noWhiteSpace)) == 0){
+        if(preg_match("/\s/",$string) == 0){
             return true;
         }
         else{
