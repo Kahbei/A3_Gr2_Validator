@@ -13,7 +13,14 @@ namespace CHECK\CheckValidator;
  * @package CHECK\CheckValidator
  */
 
-class BooleanValidator {
+class BooleanValidator
+{
+
+    /**
+     *Constructor
+     */
+    public function __construct(){
+    }
 
     /**
      * @param bool $boolean

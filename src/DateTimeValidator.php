@@ -13,6 +13,13 @@ namespace CHECK\CheckValidator;
  * @package CHECK\CheckValidator
  */
 
-class DateTimeValidator {
+class DateTimeValidator
+{
+
+    /**
+     *Constructor
+     */
+    public function __construct(){
+    }
 
 } 

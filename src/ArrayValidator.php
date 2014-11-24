@@ -13,6 +13,13 @@ namespace CHECK\CheckValidator;
  * @package CHECK\CheckValidator
  */
 
-class ArrayValidator {
+class ArrayValidator
+{
+
+    /**
+     *Constructor
+     */
+    public function __construct(){
+    }
 
 } 

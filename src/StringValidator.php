@@ -15,6 +15,13 @@ namespace CHECK\CheckValidator;
 
 class StringValidator
 {
+
+    /**
+     *Constructor
+     */
+    public function __construct(){
+    }
+
     /**
      * @param string $string
      * @param int $length

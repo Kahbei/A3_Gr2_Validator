@@ -13,7 +13,14 @@ namespace CHECK\CheckValidator;
  * @package CHECK\CheckValidator
  */
 
-class IntegerValidator {
+class IntegerValidator
+{
+
+    /**
+     *Constructor
+     */
+    public function __construct(){
+    }
 
     /**
      * @param int $integer
