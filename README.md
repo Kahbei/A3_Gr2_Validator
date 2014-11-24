@@ -73,7 +73,7 @@ $equal - Length value which it must be equal.
 echo \CHECK\CheckValidator\StringValidator::lengthSuperior($string, $min);
 ```
 $string - Your string which you want to check.
-$min - Minimal length value.
+$min - Minimal length value (defacto 0).
 
 
 * String length inferior to
@@ -81,7 +81,7 @@ $min - Minimal length value.
 echo \CHECK\CheckValidator\StringValidator::lengthInferior($string, $max);
 ```
 $string - Your string which you want to check.
-$max - Maximal length value.
+$max - Maximal length value (defacto 100).
 
 
 * String length between X and X
@@ -89,8 +89,8 @@ $max - Maximal length value.
 echo \CHECK\CheckValidator\StringValidator::lengthBetween($string, $min, $max);
 ```
 $string - Your string which you want to check.
-$min - Minimal length value.
-$max - Maximal length value.
+$min - Minimal length value (defacto 0).
+$max - Maximal length value (defacto 100).
 
 
 * No white space at the beginning and at the end of the string
@@ -124,3 +124,119 @@ $true - Your boolean which must be true.
 echo \CHECK\CheckValidator\BooleanValidator::isFalse(false);
 ```
 $false - Your boolean which must be false.
+
+## Array Validator
+
+With Array Validator, it's checking and return true if :
+
+* Array is Empty
+```php
+echo \CHECK\CheckValidator\ArrayValidator::arrayEmpty($array);
+```
+$array - Your array which you want to check.
+
+
+* Array length is equal to, inferior to, inferior or equal to, superior to, superior or equal to
+```php
+\CHECK\CheckValidator\ArrayValidator::arrayOperator($array, $operator, $int);
+```
+$array - Your array which you want to check.
+$operator - Choose the operator wanted between 5 choice.
+$int - Number which you used to check your array.
+
+
+* Array length is between X and X
+```php
+echo \CHECK\CheckValidator\ArrayValidator::arrayBetween($array, $min, $max);
+```
+$array - Your array which you want to check.
+$min - Number minimal.
+$max - Number maximal.
+
+
+* Array has this key
+```php
+echo \CHECK\CheckValidator\ArrayValidator::arrayKeyExist($array, $key);
+```
+$array - Your array which you want to check.
+$key - Key which you want to check if it's exist.
+
+
+* Array has this value
+```php
+echo \CHECK\CheckValidator\ArrayValidator::arrayValueExist($array, $value);
+```
+$array - Your array which you want to check.
+$value - Value which you want to check if it's exist.
+
+
+## DateTime Validator
+
+With DateTime Validator, it's checking and return true if :
+
+* Is Major
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::isMajor($date);
+```
+$date - Your dateTime which you want to check.
+
+
+* DateTime has same year
+```php
+\CHECK\CheckValidator\DateTimeValidator::dateYear($date, $year);
+```
+$date - Your dateTime which you want to check.
+$year - Year used to check.
+
+
+* DateTime has same month
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::dateMonth($date, $month);
+```
+$date - Your dateTime which you want to check.
+$month - Month used to check.
+
+
+* DateTime has same day
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::dateDay($date, $day);
+```
+$date - Your dateTime which you want to check.
+$day - Day used to check.
+
+
+* DateTime is passed
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::datePassed($date);
+```
+$date - Your dateTime which you want to check.
+
+
+* DateTime is coming
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::dateComing($date);
+```
+$date - Your dateTime which you want to check.
+
+
+* More than X day since
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::dateMoreThan($date ,$dayPassed);
+```
+$date - Your dateTime which you want to check.
+$dayPassed - Number of day passed.
+
+
+* Less than X day since
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::dateLessThan($date ,$dayPassed);
+```
+$date - Your dateTime which you want to check.
+$dayPassed - Number of day passed.
+
+* Same TimeZone
+```php
+echo \CHECK\CheckValidator\DateTimeValidator::TimeZone($date, $timeZone);
+```
+$date - Your dateTime which you want to check.
+$timeZone - Timezone used to check.

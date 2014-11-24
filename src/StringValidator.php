@@ -51,7 +51,7 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function lengthBetween($string, $lengthMin, $lengthMax){
+    public static function lengthBetween($string, $lengthMin = 0, $lengthMax = 100){
         if(!is_string($string) || !is_int($lengthMin) || !is_int($lengthMax)){
             throw new \Exception('Parameter must be in correct format');
         }
