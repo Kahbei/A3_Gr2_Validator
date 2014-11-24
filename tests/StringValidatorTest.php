@@ -14,7 +14,7 @@ use CHECK\CheckValidator\StringValidator;
  * Class StringValidatorTests
  * @package Tests\CHECK\CheckValidator
  */
-class StringValidatorTests extends \PHPUnit_Framework_TestCase
+class StringValidatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test if the string is equal to a specific length

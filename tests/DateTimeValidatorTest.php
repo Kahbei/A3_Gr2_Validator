@@ -14,7 +14,7 @@ use CHECK\CheckValidator\DateTimeValidator;
  * Class DateTimeValidatorTests
  * @package Tests\CHECK\CheckValidator
  */
-class DateTimeValidatorTests extends \PHPUnit_Framework_TestCase
+class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test if with the DateTime if it's 18 year or plus
@@ -203,7 +203,7 @@ class DateTimeValidatorTests extends \PHPUnit_Framework_TestCase
      */
     public function testSameTimeZone(){
         $date = new \DateTime();
-        $boolean = DateTimeValidator::dateLessThan($date, 'UTC');
+        $boolean = DateTimeValidator::timeZone($date, 'UTC');
         $this->assertTrue($boolean);
     }
 
@@ -214,7 +214,7 @@ class DateTimeValidatorTests extends \PHPUnit_Framework_TestCase
      */
     public function testNotSameTimeZone(){
         $date = new \DateTime();
-        $boolean = DateTimeValidator::dateLessThan($date, 'Asia/Tokyo');
+        $boolean = DateTimeValidator::timeZone($date, 'Asia/Tokyo');
         $this->assertFalse($boolean);
     }
 } 

@@ -12,7 +12,6 @@ namespace CHECK\CheckValidator;
  * Class DateTimeValidator
  * @package CHECK\CheckValidator
  */
-
 class DateTimeValidator
 {
 
@@ -180,7 +179,7 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function TimeZone(\DateTime $date, $timeZone){
+    public static function timeZone(\DateTime $date, $timeZone){
         if(!is_string($timeZone)){
             throw new \Exception('Parameter must be string');
         }

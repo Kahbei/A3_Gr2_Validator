@@ -14,7 +14,7 @@ use CHECK\CheckValidator\ArrayValidator;
  * Class ArrayValidatorTests
  * @package Tests\CHECK\CheckValidator
  */
-class ArrayValidatorTests extends \PHPUnit_Framework_TestCase
+class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test if the array is empty
@@ -211,6 +211,6 @@ class ArrayValidatorTests extends \PHPUnit_Framework_TestCase
     public function testArrayValueDoNotExist(){
         $array = array('PI' => '3.14', 'ln(e)' => '1');
         $boolean = ArrayValidator::arrayValueExist($array,'42');
-        $this->assertTrue($boolean);
+        $this->assertFalse($boolean);
     }
 } 

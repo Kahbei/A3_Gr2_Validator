@@ -12,7 +12,6 @@ namespace CHECK\CheckValidator;
  * Class IntegerValidator
  * @package CHECK\CheckValidator
  */
-
 class IntegerValidator
 {
 
@@ -35,10 +34,10 @@ class IntegerValidator
             throw new \Exception('The paramaters need to be int');
         }
         if($integer == $equal){
-            return false;
+            return true;
         }
         else{
-            return true;
+            return false;
         }
     }
 

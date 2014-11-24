@@ -12,7 +12,6 @@ namespace CHECK\CheckValidator;
  * Class BooleanValidator
  * @package CHECK\CheckValidator
  */
-
 class BooleanValidator
 {
 

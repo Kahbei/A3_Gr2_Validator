@@ -12,7 +12,6 @@ namespace CHECK\CheckValidator;
  * Class ArrayValidator
  * @package CHECK\CheckValidator
  */
-
 class ArrayValidator
 {
 

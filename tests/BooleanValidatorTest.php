@@ -14,7 +14,7 @@ use CHECK\CheckValidator\BooleanValidator;
  * Class BooleanValidatorTests
  * @package Tests\CHECK\CheckValidator
  */
-class BooleanValidatorTests extends \PHPUnit_Framework_TestCase
+class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test if the boolean is true

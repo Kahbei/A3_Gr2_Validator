@@ -14,7 +14,7 @@ use CHECK\CheckValidator\IntegerValidator;
  * Class IntegerValidatorTests
  * @package Tests\CHECK\CheckValidator
  */
-class IntegerValidatorTests extends \PHPUnit_Framework_TestCase
+class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test if the integer is equal
