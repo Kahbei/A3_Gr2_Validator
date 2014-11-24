@@ -13,6 +13,7 @@ With Integer Validator, it's checking and return true if your number is :
 echo \CHECK\CheckValidator\IntegerValidator::equal($int,$equal);
 ```
 $int - Number you want to check.
+
 $equal - Number which serve to test (defacto 0).
 
 
@@ -21,7 +22,9 @@ $equal - Number which serve to test (defacto 0).
 echo \CHECK\CheckValidator\IntegerValidator::between($int,$min,$max);
 ```
 $int - Number you want to check.
+
 $min - Number minimum (defacto 0).
+
 $max - Number maximum (defacto 10).
 
 
@@ -30,6 +33,7 @@ $max - Number maximum (defacto 10).
 $inferior = \CHECK\CheckValidator\IntegerValidator::minus($int,$max);
 ```
 $int - Number you want to check.
+
 $max - Number maximum (defacto 10).
 
 
@@ -38,6 +42,7 @@ $max - Number maximum (defacto 10).
 echo \CHECK\CheckValidator\IntegerValidator::superior($int,$min);
 ```
 $int - Number you want to check.
+
 $min - Number minimum (defacto 0).
 
 
@@ -65,6 +70,7 @@ With String Validator, it's checking and return true if your string is :
 echo \CHECK\CheckValidator\StringValidator::lengthEqual($string, $equal);
 ```
 $string - Your string which you want to check.
+
 $equal - Length value which it must be equal.
 
 
@@ -73,6 +79,7 @@ $equal - Length value which it must be equal.
 echo \CHECK\CheckValidator\StringValidator::lengthSuperior($string, $min);
 ```
 $string - Your string which you want to check.
+
 $min - Minimal length value (defacto 0).
 
 
@@ -81,6 +88,7 @@ $min - Minimal length value (defacto 0).
 echo \CHECK\CheckValidator\StringValidator::lengthInferior($string, $max);
 ```
 $string - Your string which you want to check.
+
 $max - Maximal length value (defacto 100).
 
 
@@ -89,7 +97,9 @@ $max - Maximal length value (defacto 100).
 echo \CHECK\CheckValidator\StringValidator::lengthBetween($string, $min, $max);
 ```
 $string - Your string which you want to check.
+
 $min - Minimal length value (defacto 0).
+
 $max - Maximal length value (defacto 100).
 
 
@@ -141,7 +151,9 @@ $array - Your array which you want to check.
 \CHECK\CheckValidator\ArrayValidator::arrayOperator($array, $operator, $int);
 ```
 $array - Your array which you want to check.
+
 $operator - Choose the operator wanted between 5 choice.
+
 $int - Number which you used to check your array.
 
 
@@ -150,7 +162,9 @@ $int - Number which you used to check your array.
 echo \CHECK\CheckValidator\ArrayValidator::arrayBetween($array, $min, $max);
 ```
 $array - Your array which you want to check.
+
 $min - Number minimal.
+
 $max - Number maximal.
 
 
@@ -159,6 +173,7 @@ $max - Number maximal.
 echo \CHECK\CheckValidator\ArrayValidator::arrayKeyExist($array, $key);
 ```
 $array - Your array which you want to check.
+
 $key - Key which you want to check if it's exist.
 
 
@@ -167,6 +182,7 @@ $key - Key which you want to check if it's exist.
 echo \CHECK\CheckValidator\ArrayValidator::arrayValueExist($array, $value);
 ```
 $array - Your array which you want to check.
+
 $value - Value which you want to check if it's exist.
 
 
@@ -186,6 +202,7 @@ $date - Your dateTime which you want to check.
 \CHECK\CheckValidator\DateTimeValidator::dateYear($date, $year);
 ```
 $date - Your dateTime which you want to check.
+
 $year - Year used to check.
 
 
@@ -194,6 +211,7 @@ $year - Year used to check.
 echo \CHECK\CheckValidator\DateTimeValidator::dateMonth($date, $month);
 ```
 $date - Your dateTime which you want to check.
+
 $month - Month used to check.
 
 
@@ -202,6 +220,7 @@ $month - Month used to check.
 echo \CHECK\CheckValidator\DateTimeValidator::dateDay($date, $day);
 ```
 $date - Your dateTime which you want to check.
+
 $day - Day used to check.
 
 
@@ -224,6 +243,7 @@ $date - Your dateTime which you want to check.
 echo \CHECK\CheckValidator\DateTimeValidator::dateMoreThan($date ,$dayPassed);
 ```
 $date - Your dateTime which you want to check.
+
 $dayPassed - Number of day passed.
 
 
@@ -232,6 +252,7 @@ $dayPassed - Number of day passed.
 echo \CHECK\CheckValidator\DateTimeValidator::dateLessThan($date ,$dayPassed);
 ```
 $date - Your dateTime which you want to check.
+
 $dayPassed - Number of day passed.
 
 * Same TimeZone
@@ -239,4 +260,5 @@ $dayPassed - Number of day passed.
 echo \CHECK\CheckValidator\DateTimeValidator::TimeZone($date, $timeZone);
 ```
 $date - Your dateTime which you want to check.
+
 $timeZone - Timezone used to check.
