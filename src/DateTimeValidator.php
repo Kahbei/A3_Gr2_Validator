@@ -14,7 +14,6 @@ namespace CHECK\CheckValidator;
  */
 class DateTimeValidator
 {
-
     /**
      * @param \DateTime $date
      *
@@ -150,5 +149,4 @@ class DateTimeValidator
         $dateTimeZone = $date1 === $date2;
         return $dateTimeZone;
     }
-
 }

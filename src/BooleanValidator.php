@@ -14,7 +14,6 @@ namespace CHECK\CheckValidator;
  */
 class BooleanValidator
 {
-
     /**
      * @param bool $boolean
      *
@@ -42,5 +41,4 @@ class BooleanValidator
 
         return !$boolean;
     }
-
 }

@@ -14,7 +14,6 @@ namespace CHECK\CheckValidator;
  */
 class ArrayValidator
 {
-
     const OPERATOR_EQUAL          = 1;
     const OPERATOR_INFERIOR       = 2;
     const OPERATOR_INFERIOR_EQUAL = 3;
@@ -134,5 +133,4 @@ class ArrayValidator
         $arrayValue = in_array($value, $array);
         return $arrayValue;
     }
-
 }

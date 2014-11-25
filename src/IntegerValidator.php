@@ -14,7 +14,6 @@ namespace CHECK\CheckValidator;
  */
 class IntegerValidator
 {
-
     /**
      * @param int $integer
      * @param int $equal
@@ -109,5 +108,4 @@ class IntegerValidator
         $negative = $integer <= 0;
         return $negative;
     }
-
 }
