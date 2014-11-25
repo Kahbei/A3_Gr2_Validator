@@ -55,9 +55,9 @@ class ArrayValidator
             self::OPERATOR_INFERIOR_EQUAL,
             self::OPERATOR_SUPERIOR,
             self::OPERATOR_SUPERIOR_EQUAL,
-        ]) === false){
+        ]) === false)
             throw new \Exception('Parameter must be in the correct type');
-        }
+
 
         $arrayOperator = false;
 
