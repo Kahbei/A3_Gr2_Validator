@@ -22,7 +22,7 @@ class DateTimeValidator
      */
     public static function isMajor(\DateTime $date) {
         $dateNow = new \DateTime();
-        $minus = $date->diff($dateNow)->y;
+        $minus   = $date->diff($dateNow)->y;
         $isMajor = $minus >= 18;
         return $isMajor;
     }
@@ -152,3 +152,4 @@ class DateTimeValidator
     }
 
 }
+
