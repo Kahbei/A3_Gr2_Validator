@@ -110,4 +110,4 @@ class IntegerValidator
         return $integer <= 0;
     }
 
-} 
+}
