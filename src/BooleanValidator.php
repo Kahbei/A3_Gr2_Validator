@@ -18,7 +18,7 @@ class BooleanValidator
     /**
      *Constructor
      */
-    public function __construct(){
+    public function __construct() {
     }
 
     /**
@@ -28,17 +28,11 @@ class BooleanValidator
      *
      * @throws \Exception
      */
-    public static function isTrue($boolean)
-    {
-        if(!is_bool($boolean)){
+    public static function isTrue($boolean) {
+        if(is_bool($boolean) === false){
             throw new \Exception('The parameter need to be a boolean');
         }
-        if(!$boolean){
-            return false;
-        }
-        else{
-            return true;
-        }
+        return $boolean;
     }
 
     /**
@@ -48,16 +42,10 @@ class BooleanValidator
      *
      * @throws \Exception
      */
-    public static function isFalse($boolean)
-    {
-        if(!is_bool($boolean)){
+    public static function isFalse($boolean) {
+        if(is_bool($boolean) === false){
             throw new \Exception('The parameter need to be a boolean');
         }
-        if(!$boolean){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return !$boolean;
     }
 } 

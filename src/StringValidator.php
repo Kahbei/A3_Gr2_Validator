@@ -18,7 +18,7 @@ class StringValidator
     /**
      *Constructor
      */
-    public function __construct(){
+    public function __construct() {
     }
 
     /**
@@ -29,16 +29,11 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function lengthEqual($string, $length){
-        if(!is_string($string) || !is_int($length)){
+    public static function lengthEqual($string, $length) {
+        if(is_string($string) === false || is_int($length) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        if(mb_strlen($string) == $length){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return mb_strlen($string) === $length;
     }
 
     /**
@@ -50,16 +45,11 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function lengthBetween($string, $lengthMin = 0, $lengthMax = 100){
-        if(!is_string($string) || !is_int($lengthMin) || !is_int($lengthMax)){
+    public static function lengthBetween($string, $lengthMin = 0, $lengthMax = 100) {
+        if(is_string($string) === false || is_int($lengthMin) === false || is_int($lengthMax) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        if(mb_strlen($string) >= $lengthMin && mb_strlen($string) <= $lengthMax){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return mb_strlen($string) >= $lengthMin && mb_strlen($string) <= $lengthMax;
     }
 
     /**
@@ -70,16 +60,11 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function lengthSuperior($string, $length){
-        if(!is_string($string) || !is_int($length)){
+    public static function lengthSuperior($string, $length) {
+        if(is_string($string) === false || is_int($length) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        if(mb_strlen($string) >= $length){
-            return true;
-        }
-        else{
-            return false;
-        }
+         return mb_strlen($string) >= $length;
     }
 
     /**
@@ -90,16 +75,11 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function lengthInferior($string, $length){
-        if(!is_string($string) || !is_int($length)){
+    public static function lengthInferior($string, $length) {
+        if(is_string($string) === false || is_int($length) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        if(mb_strlen($string) <= $length){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return mb_strlen($string) <= $length;
     }
 
     /**
@@ -109,16 +89,11 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function noWhiteSpaceBeginningEnd($string){
-        if(!is_string($string)){
+    public static function noWhiteSpaceBeginningEnd($string) {
+        if(is_string($string) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        if(preg_match("/^\s/",$string) == 0 && preg_match("/\s$/",$string) == 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return preg_match("/^\s/",$string) == 0 && preg_match("/\s$/",$string) == 0;
     }
 
     /**
@@ -128,15 +103,10 @@ class StringValidator
      *
      * @throws \Exception
      */
-    public static function noWhiteSpace($string){
-        if(!is_string($string)){
+    public static function noWhiteSpace($string) {
+        if(is_string($string) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        if(preg_match("/\s/",$string) == 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return preg_match("/\s/",$string) == 0;
     }
 }
