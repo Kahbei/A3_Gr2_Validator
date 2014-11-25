@@ -20,9 +20,10 @@ class DateTimeValidator
      *
      * @return bool
      */
-    public static function isMajor(\DateTime $date) {
+    public static function isMajor(\DateTime $date)
+    {
         $dateNow = new \DateTime();
-        $minus   = $date->diff($dateNow)->y;
+        $minus = $date->diff($dateNow)->y;
         $isMajor = $minus >= 18;
         return $isMajor;
     }
@@ -35,8 +36,9 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function dateYear(\DateTime $date, $year) {
-        if(is_int($year) === false)
+    public static function dateYear(\DateTime $date, $year)
+    {
+        if (is_int($year) === false)
             throw new \Exception('This parameter must be int');
 
         $dateYear = $date->format('Y') == $year;
@@ -51,8 +53,9 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function dateMonth(\DateTime $date, $month) {
-        if(is_int($month) === false)
+    public static function dateMonth(\DateTime $date, $month)
+    {
+        if (is_int($month) === false)
             throw new \Exception('This parameter must be int');
 
         $dateMonth = $date->format('m') == $month;
@@ -67,8 +70,9 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function dateDay(\DateTime $date, $day) {
-        if(is_int($day) === false)
+    public static function dateDay(\DateTime $date, $day)
+    {
+        if (is_int($day) === false)
             throw new \Exception('This parameter must be int');
 
         $dateDay = $date->format('d') == $day;
@@ -80,8 +84,9 @@ class DateTimeValidator
      *
      * @return bool
      */
-    public  static function datePassed(\DateTime $date) {
-        $dateNow    = new \DateTime();
+    public static function datePassed(\DateTime $date)
+    {
+        $dateNow = new \DateTime();
         $datePassed = $date < $dateNow;
         return $datePassed;
     }
@@ -91,8 +96,9 @@ class DateTimeValidator
      *
      * @return bool
      */
-    public static function dateComing(\DateTime $date) {
-        $dateNow    = new \DateTime();
+    public static function dateComing(\DateTime $date)
+    {
+        $dateNow = new \DateTime();
         $dateComing = $date > $dateNow;
         return $dateComing;
     }
@@ -105,12 +111,13 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function dateMoreThan(\DateTime $date, $dayPassed) {
-        if(is_int($dayPassed) === false)
+    public static function dateMoreThan(\DateTime $date, $dayPassed)
+    {
+        if (is_int($dayPassed) === false)
             throw new \Exception('Parameter must be int');
 
         $dateNow = new \DateTime();
-        $minus   = $date->diff($dateNow)->days;
+        $minus = $date->diff($dateNow)->days;
         return $minus > $dayPassed;
     }
 
@@ -122,12 +129,13 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function dateLessThan(\DateTime $date, $dayPassed) {
-        if(is_int($dayPassed) === false)
+    public static function dateLessThan(\DateTime $date, $dayPassed)
+    {
+        if (is_int($dayPassed) === false)
             throw new \Exception('Parameter must be int');
 
         $dateNow = new \DateTime();
-        $minus   = $date->diff($dateNow)->days;
+        $minus = $date->diff($dateNow)->days;
         return $minus < $dayPassed;
     }
 
@@ -139,14 +147,15 @@ class DateTimeValidator
      *
      * @throws \Exception
      */
-    public static function timeZone(\DateTime $date, $timeZone) {
-        if(is_string($timeZone) === false)
+    public static function timeZone(\DateTime $date, $timeZone)
+    {
+        if (is_string($timeZone) === false)
             throw new \Exception('Parameter must be string');
 
-        $dateNow      = new \DateTime();
-        $dateZone     = $dateNow->setTimezone(new \DateTimeZone($timeZone));
-        $date1        = $dateZone->getTimezone()->getName();
-        $date2        = $date->getTimezone()->getName();
+        $dateNow = new \DateTime();
+        $dateZone = $dateNow->setTimezone(new \DateTimeZone($timeZone));
+        $date1 = $dateZone->getTimezone()->getName();
+        $date2 = $date->getTimezone()->getName();
         $dateTimeZone = $date1 === $date2;
         return $dateTimeZone;
     }
