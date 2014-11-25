@@ -63,7 +63,8 @@ class ArrayValidator
         ]) === false){
             throw new \Exception('Parameter must be in the correct type');
         }
-        $arrayOperator = 0;
+
+        $arrayOperator = false;
 
         switch($operator){
             case self::OPERATOR_EQUAL:

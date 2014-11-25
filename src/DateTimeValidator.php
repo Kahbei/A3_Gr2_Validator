@@ -41,9 +41,9 @@ class DateTimeValidator
      * @throws \Exception
      */
     public static function dateYear(\DateTime $date, $year) {
-        if(is_int($year) === false){
+        if(is_int($year) === false)
             throw new \Exception('This parameter must be int');
-        }
+
         return $date->format('Y') == $year;
     }
 
@@ -71,9 +71,9 @@ class DateTimeValidator
      * @throws \Exception
      */
     public static function dateDay(\DateTime $date, $day) {
-        if(is_int($day) === false){
+        if(is_int($day) === false)
             throw new \Exception('This parameter must be int');
-        }
+
         return $date->format('d') == $day;
     }
 
@@ -106,9 +106,9 @@ class DateTimeValidator
      * @throws \Exception
      */
     public static function dateMoreThan(\DateTime $date, $dayPassed) {
-        if(is_int($dayPassed) === false){
+        if(is_int($dayPassed) === false)
             throw new \Exception('Parameter must be int');
-        }
+
         $dateNow = new \DateTime();
         $minus   = $date->diff($dateNow);
         return $minus->days > $dayPassed;
@@ -123,9 +123,9 @@ class DateTimeValidator
      * @throws \Exception
      */
     public static function dateLessThan(\DateTime $date, $dayPassed) {
-        if(is_int($dayPassed) === false){
+        if(is_int($dayPassed) === false)
             throw new \Exception('Parameter must be int');
-        }
+
         $dateNow = new \DateTime();
         $minus   = $date->diff($dateNow);
         return $minus->days < $dayPassed;
@@ -140,9 +140,9 @@ class DateTimeValidator
      * @throws \Exception
      */
     public static function timeZone(\DateTime $date, $timeZone) {
-        if(is_string($timeZone) === false){
+        if(is_string($timeZone) === false)
             throw new \Exception('Parameter must be string');
-        }
+
         $dateNow  = new \DateTime();
         $dateZone = $dateNow->setTimezone(new \DateTimeZone($timeZone));
         $date1    = $dateZone->getTimezone();
