@@ -13,9 +13,7 @@ namespace CHECK\CheckValidator;
  * @package CHECK\CheckValidator
  */
 class StringValidator
-
 {
-
     /**
      * @param string $string
      * @param int $length
@@ -110,5 +108,4 @@ class StringValidator
         $noWhiteSpace = preg_match('/\s/', $string) === 0;
         return $noWhiteSpace;
     }
-
 }
