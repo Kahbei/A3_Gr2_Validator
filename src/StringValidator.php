@@ -13,6 +13,7 @@ namespace CHECK\CheckValidator;
  * @package CHECK\CheckValidator
  */
 class StringValidator
+
 {
 
     /**
