@@ -22,8 +22,8 @@ class DateTimeValidator
      */
     public static function isMajor(\DateTime $date) {
         $dateNow = new \DateTime();
-        $minus   = $date->diff($dateNow);
-        $isMajor = $minus->y >= 18;
+        $minus   = $date->diff($dateNow)->y;
+        $isMajor = $minus >= 18;
         return $isMajor;
     }
 
@@ -110,8 +110,8 @@ class DateTimeValidator
             throw new \Exception('Parameter must be int');
 
         $dateNow      = new \DateTime();
-        $minus        = $date->diff($dateNow);
-        $dateMoreThan = $minus->days > $dayPassed;
+        $minus        = $date->diff($dateNow)->days;
+        $dateMoreThan = $minus > $dayPassed;
         return $dateMoreThan;
     }
 
@@ -128,8 +128,8 @@ class DateTimeValidator
             throw new \Exception('Parameter must be int');
 
         $dateNow      = new \DateTime();
-        $minus        = $date->diff($dateNow);
-        $dateLessThan = $minus->days < $dayPassed;
+        $minus        = $date->diff($dateNow)->days;
+        $dateLessThan = $minus < $dayPassed;
         return $dateLessThan;
     }
 
@@ -147,9 +147,9 @@ class DateTimeValidator
 
         $dateNow      = new \DateTime();
         $dateZone     = $dateNow->setTimezone(new \DateTimeZone($timeZone));
-        $date1        = $dateZone->getTimezone();
-        $date2        = $date->getTimezone();
-        $dateTimeZone = $date1->getName() === $date2->getName();
+        $date1        = $dateZone->getTimezone()->getName();
+        $date2        = $date->getTimezone()->getName();
+        $dateTimeZone = $date1 === $date2;
         return $dateTimeZone;
     }
 
