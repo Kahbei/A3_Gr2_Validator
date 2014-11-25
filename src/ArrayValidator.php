@@ -21,11 +21,11 @@ class ArrayValidator
     public function __construct() {
     }
 
-    const OPERATOR_EQUAL            = 1;
-    const OPERATOR_INFERIOR         = 2;
-    const OPERATOR_INFERIOR_EQUAL   = 3;
-    const OPERATOR_SUPERIOR         = 4;
-    const OPERATOR_SUPERIOR_EQUAL   = 5;
+    const OPERATOR_EQUAL          = 1;
+    const OPERATOR_INFERIOR       = 2;
+    const OPERATOR_INFERIOR_EQUAL = 3;
+    const OPERATOR_SUPERIOR       = 4;
+    const OPERATOR_SUPERIOR_EQUAL = 5;
 
     /**
      * @param array $array
@@ -54,19 +54,19 @@ class ArrayValidator
         if(is_array($array) === false || is_int($int) === false){
             throw new \Exception('Parameter must be in the correct type');
         }
-        if(!in_array($operator, [
+        if(in_array($operator, [
             self::OPERATOR_EQUAL,
             self::OPERATOR_INFERIOR,
             self::OPERATOR_INFERIOR_EQUAL,
             self::OPERATOR_SUPERIOR,
             self::OPERATOR_SUPERIOR_EQUAL,
-        ])){
+        ]) === false){
             throw new \Exception('Parameter must be in the correct type');
         }
         $arrayOperator = '';
         switch($operator){
             case self::OPERATOR_EQUAL:
-                $arrayOperator = count($array) == $int;
+                return $arrayOperator = count($array) == $int;
                 break;
 
             case self::OPERATOR_SUPERIOR_EQUAL:
