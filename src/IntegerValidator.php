@@ -33,7 +33,7 @@ class IntegerValidator
         if(is_int($integer) === false || is_int($equal) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        return $integer === $equal;
+        return ($integer === $equal) ? true : false;
     }
 
     /**
@@ -49,7 +49,7 @@ class IntegerValidator
         if(is_int($integer) === false || is_int($min) === false || is_int($max) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        return $integer >= $min && $integer <= $max;
+        return ($integer >= $min && $integer <= $max) ? true : false;
     }
 
     /**
@@ -64,7 +64,7 @@ class IntegerValidator
         if(is_int($integer) === false || is_int($min) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        return $integer >= $min;
+        return ($integer >= $min) ? true : false;
     }
 
     /**
@@ -79,7 +79,7 @@ class IntegerValidator
         if(is_int($integer) === false || is_int($max) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        return $integer <= $max;
+        return ($integer <= $max) ? true : false;
     }
 
     /**
@@ -93,7 +93,7 @@ class IntegerValidator
         if(is_int($integer) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        return $integer >= 0;
+        return ($integer >= 0) ? true : false;
     }
 
     /**
@@ -107,7 +107,7 @@ class IntegerValidator
         if(is_int($integer) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        return $integer <= 0;
+        return ($integer <= 0) ? true : false;
     }
 
 }
