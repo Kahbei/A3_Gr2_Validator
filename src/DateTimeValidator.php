@@ -44,7 +44,7 @@ class DateTimeValidator
         if(is_int($year) === false){
             throw new \Exception('This parameter must be int');
         }
-        return $date->format('Y') === $year;
+        return $date->format('Y') == $year;
     }
 
     /**
@@ -59,7 +59,7 @@ class DateTimeValidator
         if(is_int($month) === false){
             throw new \Exception('This parameter must be int');
         }
-        return $date->format('m') === $month;
+        return $date->format('m') == $month;
     }
 
     /**
@@ -74,7 +74,7 @@ class DateTimeValidator
         if(is_int($day) === false){
             throw new \Exception('This parameter must be int');
         }
-        return $date->format('d') === $day;
+        return $date->format('d') == $day;
     }
 
     /**

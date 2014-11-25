@@ -66,7 +66,7 @@ class ArrayValidator
         $arrayOperator = '';
         switch($operator){
             case self::OPERATOR_EQUAL:
-                return $arrayOperator = count($array) == $int;
+                $arrayOperator = count($array) === $int;
                 break;
 
             case self::OPERATOR_SUPERIOR_EQUAL:
