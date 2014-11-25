@@ -63,7 +63,8 @@ class ArrayValidator
         ]) === false){
             throw new \Exception('Parameter must be in the correct type');
         }
-        $arrayOperator = '';
+        $arrayOperator = 0;
+
         switch($operator){
             case self::OPERATOR_EQUAL:
                 $arrayOperator = count($array) === $int;
@@ -135,4 +136,5 @@ class ArrayValidator
         $arrayValue = in_array($value, $array);
         return $arrayValue;
     }
+
 } 

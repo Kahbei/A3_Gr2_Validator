@@ -213,4 +213,5 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
         $boolean = ArrayValidator::arrayValueExist($array,'42');
         $this->assertFalse($boolean);
     }
+
 } 

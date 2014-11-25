@@ -217,4 +217,5 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
         $boolean = DateTimeValidator::timeZone($date, 'Asia/Tokyo');
         $this->assertFalse($boolean);
     }
+
 } 

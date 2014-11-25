@@ -48,4 +48,5 @@ class BooleanValidator
         }
         return !$boolean;
     }
+
 } 

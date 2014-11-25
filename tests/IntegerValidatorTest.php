@@ -148,4 +148,5 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
         $boolean = IntegerValidator::negative($int);
         $this->assertFalse($boolean);
     }
+
 } 

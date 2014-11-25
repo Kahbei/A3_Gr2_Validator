@@ -155,4 +155,5 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
         $boolean = StringValidator::noWhiteSpace($string);
         $this->assertFalse($boolean);
     }
+
 } 

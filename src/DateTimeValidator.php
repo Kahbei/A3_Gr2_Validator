@@ -149,4 +149,5 @@ class DateTimeValidator
         $date2    = $date->getTimezone();
         return $date1->getName() === $date2->getName();
     }
+
 } 
