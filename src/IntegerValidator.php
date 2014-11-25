@@ -18,7 +18,7 @@ class IntegerValidator
     /**
      *Constructor
      */
-    public function __construct(){
+    public function __construct() {
     }
 
     /**
@@ -29,16 +29,11 @@ class IntegerValidator
      *
      * @throws \Exception
      */
-    public static function equal($integer, $equal = 0){
-        if(!is_int($integer) || !is_int($equal)){
+    public static function equal($integer, $equal = 0) {
+        if(is_int($integer) === false || is_int($equal) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        if($integer == $equal){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $integer === $equal;
     }
 
     /**
@@ -50,16 +45,11 @@ class IntegerValidator
      *
      * @return bool
      */
-    public static function between($integer, $min = 0, $max = 10){
-        if(!is_int($integer) || !is_int($min) || !is_int($max)){
+    public static function between($integer, $min = 0, $max = 10) {
+        if(is_int($integer) === false || is_int($min) === false || is_int($max) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        if($integer >= $min && $integer <= $max){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $integer >= $min && $integer <= $max;
     }
 
     /**
@@ -70,16 +60,11 @@ class IntegerValidator
      *
      * @throws \Exception
      */
-    public static function superior($integer, $min = 0){
-        if(!is_int($integer) || !is_int($min)){
+    public static function superior($integer, $min = 0) {
+        if(is_int($integer) === false || is_int($min) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        if($integer >= $min){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $integer >= $min;
     }
 
     /**
@@ -90,16 +75,11 @@ class IntegerValidator
      *
      * @throws \Exception
      */
-    public static function minus($integer, $max = 10){
-        if(!is_int($integer) || !is_int($max)){
+    public static function minus($integer, $max = 10) {
+        if(is_int($integer) === false || is_int($max) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        if($integer <= $max){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $integer <= $max;
     }
 
     /**
@@ -109,16 +89,11 @@ class IntegerValidator
      *
      * @throws \Exception
      */
-    public static function positive($integer){
-        if(!is_int($integer)){
+    public static function positive($integer) {
+        if(is_int($integer) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        if($integer >= 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $integer >= 0;
     }
 
     /**
@@ -128,15 +103,10 @@ class IntegerValidator
      *
      * @throws \Exception
      */
-    public static function negative($integer){
-        if(!is_int($integer)){
+    public static function negative($integer) {
+        if(is_int($integer) === false){
             throw new \Exception('The paramaters need to be int');
         }
-        if($integer <= 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $integer <= 0;
     }
 } 

@@ -93,7 +93,7 @@ class StringValidator
         if(is_string($string) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        return preg_match("/^\s/",$string) === 0 && preg_match("/\s$/",$string) === 0;
+        return preg_match("/^\s/", $string) === 0 && preg_match("/\s$/", $string) === 0;
     }
 
     /**
@@ -107,6 +107,6 @@ class StringValidator
         if(is_string($string) === false){
             throw new \Exception('Parameter must be in correct format');
         }
-        return preg_match("/\s/",$string) === 0;
+        return preg_match("/\s/", $string) === 0;
     }
 }
