@@ -109,8 +109,8 @@ class DateTimeValidator
         if(is_int($dayPassed) === false)
             throw new \Exception('Parameter must be int');
 
-        $dateNow      = new \DateTime();
-        $minus        = $date->diff($dateNow)->days;
+        $dateNow = new \DateTime();
+        $minus   = $date->diff($dateNow)->days;
         return $minus > $dayPassed;
     }
 
@@ -126,8 +126,8 @@ class DateTimeValidator
         if(is_int($dayPassed) === false)
             throw new \Exception('Parameter must be int');
 
-        $dateNow      = new \DateTime();
-        $minus        = $date->diff($dateNow)->days;
+        $dateNow = new \DateTime();
+        $minus   = $date->diff($dateNow)->days;
         return $minus < $dayPassed;
     }
 
