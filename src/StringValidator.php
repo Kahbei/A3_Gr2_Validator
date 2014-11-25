@@ -16,12 +16,6 @@ class StringValidator
 {
 
     /**
-     *Constructor
-     */
-    public function __construct() {
-    }
-
-    /**
      * @param string $string
      * @param int $length
      *
@@ -33,7 +27,8 @@ class StringValidator
         if(is_string($string) === false || is_int($length) === false)
             throw new \Exception('Parameter must be in correct format');
 
-        return mb_strlen($string) === $length;
+        $lengthEqual = mb_strlen($string) === $length;
+        return $lengthEqual;
     }
 
     /**
@@ -49,7 +44,8 @@ class StringValidator
         if(is_string($string) === false || is_int($lengthMin) === false || is_int($lengthMax) === false)
             throw new \Exception('Parameter must be in correct format');
 
-        return mb_strlen($string) >= $lengthMin && mb_strlen($string) <= $lengthMax;
+        $lengthBetween = mb_strlen($string) >= $lengthMin && mb_strlen($string) <= $lengthMax;
+        return $lengthBetween;
     }
 
     /**
@@ -64,7 +60,8 @@ class StringValidator
         if(is_string($string) === false || is_int($length) === false)
             throw new \Exception('Parameter must be in correct format');
 
-         return mb_strlen($string) >= $length;
+        $lengthSuperior = mb_strlen($string) >= $length;
+        return $lengthSuperior;
     }
 
     /**
@@ -79,7 +76,8 @@ class StringValidator
         if(is_string($string) === false || is_int($length) === false)
             throw new \Exception('Parameter must be in correct format');
 
-        return mb_strlen($string) <= $length;
+        $lengthInferior = mb_strlen($string) <= $length;
+        return $lengthInferior;
     }
 
     /**
@@ -93,7 +91,8 @@ class StringValidator
         if(is_string($string) === false)
             throw new \Exception('Parameter must be in correct format');
 
-        return preg_match('/^\s/', $string) === 0 && preg_match('/\s$/', $string) === 0;
+        $noWhiteSpaceBeginningEnd = preg_match('/^\s/', $string) === 0 && preg_match('/\s$/', $string) === 0;
+        return $noWhiteSpaceBeginningEnd;
     }
 
     /**
@@ -107,7 +106,8 @@ class StringValidator
         if(is_string($string) === false)
             throw new \Exception('Parameter must be in correct format');
 
-        return preg_match('/\s/', $string) === 0;
+        $noWhiteSpace = preg_match('/\s/', $string) === 0;
+        return $noWhiteSpace;
     }
 
 }

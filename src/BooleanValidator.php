@@ -16,12 +16,6 @@ class BooleanValidator
 {
 
     /**
-     *Constructor
-     */
-    public function __construct() {
-    }
-
-    /**
      * @param bool $boolean
      *
      * @return bool

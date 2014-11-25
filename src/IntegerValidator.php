@@ -16,12 +16,6 @@ class IntegerValidator
 {
 
     /**
-     *Constructor
-     */
-    public function __construct() {
-    }
-
-    /**
      * @param int $integer
      * @param int $equal
      *
