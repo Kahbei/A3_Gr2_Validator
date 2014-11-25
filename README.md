@@ -2,7 +2,7 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/build-status/master)[![Build Status](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/build-status/master)
+[![Build Status](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Kahbei/A3_Gr2_Validator/build-status/master)
 
 This lib will check and validate some int, string, array, boolean, DateTime.
 
