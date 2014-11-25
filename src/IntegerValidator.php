@@ -24,7 +24,7 @@ class IntegerValidator
      * @throws \Exception
      */
     public static function equal($integer, $equal = 0) {
-        if(is_int($integer) === false || is_int($equal) === false)
+        if (is_int($integer) === false || is_int($equal) === false)
             throw new \Exception('The paramaters need to be int');
 
         $equality = $integer === $equal;
@@ -41,7 +41,7 @@ class IntegerValidator
      * @return bool
      */
     public static function between($integer, $min = 0, $max = 10) {
-        if(is_int($integer) === false || is_int($min) === false || is_int($max) === false)
+        if (is_int($integer) === false || is_int($min) === false || is_int($max) === false)
             throw new \Exception('The paramaters need to be int');
 
         $between = $integer >= $min && $integer <= $max;
@@ -57,7 +57,7 @@ class IntegerValidator
      * @throws \Exception
      */
     public static function superior($integer, $min = 0) {
-        if(is_int($integer) === false || is_int($min) === false)
+        if (is_int($integer) === false || is_int($min) === false)
             throw new \Exception('The paramaters need to be int');
 
         $superior = $integer >= $min;
@@ -73,7 +73,7 @@ class IntegerValidator
      * @throws \Exception
      */
     public static function minus($integer, $max = 10) {
-        if(is_int($integer) === false || is_int($max) === false)
+        if (is_int($integer) === false || is_int($max) === false)
             throw new \Exception('The paramaters need to be int');
 
         $inferior = $integer <= $max;
@@ -88,7 +88,7 @@ class IntegerValidator
      * @throws \Exception
      */
     public static function positive($integer) {
-        if(is_int($integer) === false)
+        if (is_int($integer) === false)
             throw new \Exception('The paramaters need to be int');
 
         $positive = $integer >= 0;
@@ -103,7 +103,7 @@ class IntegerValidator
      * @throws \Exception
      */
     public static function negative($integer) {
-        if(is_int($integer) === false)
+        if (is_int($integer) === false)
             throw new \Exception('The paramaters need to be int');
 
         $negative = $integer <= 0;

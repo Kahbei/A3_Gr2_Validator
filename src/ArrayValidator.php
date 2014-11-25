@@ -29,7 +29,7 @@ class ArrayValidator
      * @throws \Exception
      */
     public static function arrayEmpty($array) {
-        if(is_array($array) === false)
+        if (is_array($array) === false)
             throw new \Exception('This parameter must be an array');
 
         $arrayEmpty = count($array) === 0;
@@ -46,22 +46,23 @@ class ArrayValidator
      * @throws \Exception
      */
     public static function arrayOperator($array, $operator, $int) {
-        if(is_array($array) === false || is_int($int) === false)
+        if (is_array($array) === false || is_int($int) === false)
             throw new \Exception('Parameter must be in the correct type');
 
-        if(in_array($operator, [
-            self::OPERATOR_EQUAL,
-            self::OPERATOR_INFERIOR,
-            self::OPERATOR_INFERIOR_EQUAL,
-            self::OPERATOR_SUPERIOR,
-            self::OPERATOR_SUPERIOR_EQUAL,
-        ]) === false)
+        if (in_array($operator, [
+                self::OPERATOR_EQUAL,
+                self::OPERATOR_INFERIOR,
+                self::OPERATOR_INFERIOR_EQUAL,
+                self::OPERATOR_SUPERIOR,
+                self::OPERATOR_SUPERIOR_EQUAL,
+            ]) === false
+        )
             throw new \Exception('Parameter must be in the correct type');
 
 
         $arrayOperator = false;
 
-        switch($operator){
+        switch ($operator) {
             case self::OPERATOR_EQUAL:
                 $arrayOperator = count($array) === $int;
                 break;
@@ -95,7 +96,7 @@ class ArrayValidator
      * @throws \Exception
      */
     public static function arrayBetween($array, $min = 0, $max = 100) {
-        if(is_array($array) === false || is_int($min) === false || is_int($max) === false)
+        if (is_array($array) === false || is_int($min) === false || is_int($max) === false)
             throw new \Exception('Parameter must be in the correct type');
 
         $arrayBetween = count($array) >= $min && count($array) <= $max;
@@ -111,7 +112,7 @@ class ArrayValidator
      * @throws \Exception
      */
     public static function arrayKeyExist($array, $key) {
-        if(is_array($array) === false || is_string($key) === false)
+        if (is_array($array) === false || is_string($key) === false)
             throw new \Exception('Parameter must be in the correct type');
 
         $arrayKey = array_key_exists($key, $array);
@@ -127,7 +128,7 @@ class ArrayValidator
      * @throws \Exception
      */
     public static function arrayValueExist($array, $value) {
-        if(is_array($array) === false || is_string($value) === false)
+        if (is_array($array) === false || is_string($value) === false)
             throw new \Exception('Parameter must be in the correct type');
 
         $arrayValue = in_array($value, $array);
@@ -135,3 +136,4 @@ class ArrayValidator
     }
 
 }
+
