@@ -111,8 +111,7 @@ class DateTimeValidator
 
         $dateNow      = new \DateTime();
         $minus        = $date->diff($dateNow)->days;
-        $dateMoreThan = $minus > $dayPassed;
-        return $dateMoreThan;
+        return $minus > $dayPassed;
     }
 
     /**
@@ -129,8 +128,7 @@ class DateTimeValidator
 
         $dateNow      = new \DateTime();
         $minus        = $date->diff($dateNow)->days;
-        $dateLessThan = $minus < $dayPassed;
-        return $dateLessThan;
+        return $minus < $dayPassed;
     }
 
     /**
