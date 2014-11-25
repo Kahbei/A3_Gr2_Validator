@@ -4,7 +4,7 @@ This lib will check and validate some int, string, array, boolean, DateTime.
 
 ## Documentation
 
-Firstly, you'll need to put these lines :
+Firstly, you'll need to put this line :
 ```php
 require __DIR__.'/vendor/autoload.php';
 ```
